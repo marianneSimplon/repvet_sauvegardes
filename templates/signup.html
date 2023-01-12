@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container py-2">
+    <h2>S'inscrire</h2>
+    <div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-danger">
+            {{ messages[0] }}. Cliquez sur <a href="{{ url_for('auth.login') }}">Se Connecter</a>.
+        </div>
+    {% endif %}
+    {% endwith %}
+        <form method="POST" action="/signup">
+            <input class="form-control mt-1" type="email" name="email" placeholder="Email" autofocus="" required>
+            <input class="form-control mt-1" type="text" name="name" placeholder="Nom" autofocus="" required>
+            <input class="form-control mt-1" type="password" name="password" placeholder="Mot de passe" required>
+            <button class="btn btn-secondary btn-block mt-1">S'inscrire</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
