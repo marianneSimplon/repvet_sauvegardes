@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/d24ffc6d-e834-4765-b9e7-d71d8d48129f/resourceGroups/appsvc_linux_centralus_basic/providers/Microsoft.Web/sites/sentiment-analysis-app",
+  "appService.deploySubpath": "."
+}
